@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: 'Quicksand',Arial, Helvetica, sans-serif;
+}
+
+.content-login{
+    margin-top: 10%;
+
+}
+
+.content-reg{
+    margin-top: 5%;
+
+}
+
+form input{
+    width: 100%;
+    margin-bottom: 5px;
+    height: 40px;
+    border-radius: 10px;
+    border-color: transparent;
+    text-indent: 5%;
+}
+form input:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.7), 0 0 15px rgba(0, 0, 255, 0.5), 0 0 20px rgba(0, 0, 255, 0.3);     
+}
+
+form button{
+    background-color: rgb(84, 144, 255);
+    border-radius: 10px;
+    border-color: none;
+    width: 50%;
+    height: 40px;
+    text-align: center;
+    color: white;
+    position: relative;
+    left: 25%;
+    border-style: none;
+}
+form button:hover{
+    background-color: rgb(80, 49, 255);
+}
+
+nav{
+    height: 50px;
+}
+
+.fname{
+    width: 45%;
+    display: inline-block;
+}
+
+.lname{
+    position: relative;
+    width: 45%;
+    left: 8%;
+    display: inline-block;
+}
+
+.messages,.pwdmessage{
+    font-size: 14px;
+    display: inline;
+}
+
+.alert-message{
+    position: relative;
+    top: 5%;
+} 
+
+.forgetpass{
+    position: relative;
+    top: -15px;
+}
+
+.forgpass{
+    font-size: 20px;
+    color: green;
+}

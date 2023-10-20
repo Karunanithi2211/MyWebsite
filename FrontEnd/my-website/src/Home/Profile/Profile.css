@@ -1,0 +1,53 @@
+.profile-container{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    left: 25%;
+    margin-top: 6%;
+}
+.profile-name{
+    position: relative;
+    left: 40%;
+}
+.profile-detail{
+    position: relative;
+    left: 30%;
+}
+label{
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-style: dashed;
+    text-decoration-color: gray;
+}
+h4{
+    position: relative;
+    left: 5%;
+    color: green;
+}
+.order-details{
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    max-height: 200px; 
+    display: block;
+    overflow-y: auto;
+}
+
+.order-details tbody {
+    display: block;
+    overflow: auto;
+}
+.order-details thead, .order-details tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.order-details thead{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+}
+
+

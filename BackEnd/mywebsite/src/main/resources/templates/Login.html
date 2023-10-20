@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWebsite/Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" th:href="@{/Common.css}">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/js/valid.js"></script>
+    <style>
+        .bg{
+            background-image: url([[${backgroundImageUrl}]]);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="bg">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <div class="container">
+            <div class="navbar-brand">MyWebsite</div>
+            <ul class="navbar-nav ml-auto">
+                <li><a th:href="@{/}" class="nav-link active">Login</a></li>
+                <li><a th:href="@{/register}" class="nav-link">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <div class="container content-login">
+            <div class="row">
+                <div class="col-sm-4 offset-sm-7">
+                    <h1 class="text-center text-white">Login</h1>
+                    <form th:action="@{/logined}" class="" method="post">
+                        <div class="mb-4 mt-3">
+                            <label for="uname" class="form-label text-white">Email Id <div th:if="${param.unf}" class="messages" style="color: red;"> *User Not Found <a th:href="@{/register}" style="text-decoration: none;">Register</a></div></label>
+                            <input type="email" class="" id="emailid" placeholder="Enter Email" name="emailid"  required autocomplete="off">
+                        </div>
+                        <div class="mb-4">
+                          <label for="pwd" class="form-label text-white">Password <div th:if="${param.pic}" class="messages" style="color: red;">Incorrect Password</div></label>
+                          <input type="password" class="" placeholder="Enter Password" name="pswd"  required>
+                        </div>
+                        <center><div th:if="${param.pic}" class="forgetpass"><a th:href="@{/forget}" style="text-decoration: none; color: red;">Forget Password?</a></div></center>
+                        <button type="submit" class="">Login</button>
+                    </form>
+                    <div class="alert-message">
+                        <div th:if="${param.logout}" class="alert alert-success"><center>Successfully Logged out</center></div>
+                        <div th:if="${param.reged}" class="alert alert-success"><center>Successfully Registered</center></div>
+                        <div th:if="${param.lif}" class="alert alert-warning"><center>LogIn first</center></div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
